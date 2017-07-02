@@ -1,0 +1,31 @@
+<div class = "container">
+    <div class = "row">
+        <div class="col-md-2 col-md-offset-4"></div>
+            <form class="form-inline" method = "POST" action = "/burgerhandle">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Burger" name = "input2">
+                </div>
+            <button type="submit" class="btn btn-default">Send Burger</button>
+            
+            {{!--<div class="col-md-8 col-sm-6 col-xs-12 well" id="../image/hamburger_bg"></div>--}}
+        </div>
+    </div>
+
+    {{!--Devour the Burger on click "Send Burger"--}}
+
+    <div class = "row" id = "row2">
+        {{#each burgersToDevour}}
+        <div class="col-xs-6 col-sm-2">
+            <button type="button" name= "button" class="btn btn-primary btn-lg btn-block" id={{id}}">{{burger_name}}</button>
+
+        </div>
+        {{/each}}
+            
+        <div class="col-xs-6 col-sm-2">
+            <div class="alert alert-warning" role="alert"></div>  
+        </div>
+    </div>    
+</div>
+
+</form>
